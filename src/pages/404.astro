@@ -1,27 +1,31 @@
+@@ -1,23 +1,31 @@
 ---
-
-import MainGridLayout from "../layouts/MainGridLayout.astro";
-
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
-import Markdown from "@components/misc/Markdown.astro";
-import I18nKey from "../i18n/i18nKey";
-import { i18n } from "../i18n/translation";
-
-const aboutPost = await getEntry("spec", "404");
-
-if (!aboutPost) {
-	throw new Error("404 page content not found");
-}
-
-const { Content } = await render(aboutPost);
+import MainGridLayout from '@layouts/MainGridLayout.astro'
+import { url } from '@utils/url-utils'
+import { Icon } from 'astro-icon/components'
+import Layout from "../layouts/Layout.astro";
 ---
-<MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
+<Layout title="Page Not Found">
+  <MainGridLayout>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <Markdown class="mt-2">
-                <Content />
-            </Markdown>
+      <div class="card-base z-10 px-9 py-6 relative w-full">
+        <div class="flex items-center gap-4 mb-6">
+          <h1 class="text-[5rem] font-bold text-[var(--primary)] dark:text-[var(--primary)] animate-bounce">404</h1>
+          <p class="text-[2rem] dark:text-neutral-50">Page Not found</p>
         </div>
+        <p class="text-neutral-400 mb-8">
+          The page you are looking for does not exist or has been moved.
+        </p>
+        <a
+          href={url("/")}
+          class="font-bold overflow-hidden active:scale-95 transition-transform duration-200 hover:scale-105 inline-block"
+        >
+          <div class="btn-plain transition max-w-fit rounded-2xl h-[3.75rem] px-6 flex items-center justify-center gap-2 bg-[var(--primary)] text-[var(--btn-content)] hover:bg-[var(--primary-hover)]">
+            Back to Home
+            <Icon name="material-symbols:chevron-right-rounded" class="text-[1.75rem]" />
+          </div>
+        </a>
+      </div>
     </div>
-</MainGridLayout>
+  </MainGridLayout>
+</Layout>
