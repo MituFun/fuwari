@@ -1,31 +1,50 @@
-@@ -1,23 +1,31 @@
 ---
 import MainGridLayout from '@layouts/MainGridLayout.astro'
 import { url } from '@utils/url-utils'
 import { Icon } from 'astro-icon/components'
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="Page Not Found">
+
+<Layout title="页面未找到">
   <MainGridLayout>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
       <div class="card-base z-10 px-9 py-6 relative w-full">
-        <div class="flex items-center gap-4 mb-6">
-          <h1 class="text-[5rem] font-bold text-[var(--primary)] dark:text-[var(--primary)] animate-bounce">404</h1>
-          <p class="text-[2rem] dark:text-neutral-50">内容未被找到</p>
-        </div>
-        <p class="text-neutral-400 mb-8">
-          您所寻求的内容已丢失或转移。
-        </p>
-<p class="italic text-gray-500 mb-6">“你们寻求我，若专心寻求，就必寻见。” — 耶利米书 29:13</p>
-        <a
-          href={url("/")}
-          class="font-bold overflow-hidden active:scale-95 transition-transform duration-200 hover:scale-105 inline-block"
-        >
-          <div class="btn-plain transition max-w-fit rounded-2xl h-[3.75rem] px-6 flex items-center justify-center gap-2 bg-[var(--primary)] text-[var(--btn-content)] hover:bg-[var(--primary-hover)]">
-            返回主页
-            <Icon name="material-symbols:chevron-right-rounded" class="text-[1.75rem]" />
+        <!-- 内容整体居中 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="flex items-center gap-4 mb-6">
+            <h1 class="text-[4rem] font-bold text-[var(--primary)] dark:text-[var(--primary)] animate-bounce"> </h1>
+            <p class="text-[3rem] dark:text-neutral-50"> </p>
           </div>
-        </a>
+<br/>
+<br/>
+<br/>
+          <p class="text-[2rem] text-neutral-400 mb-3">
+            您所寻求的内容已丢失或转移。
+
+          </p>
+
+
+        </div>
+<div class="flex justify-end">
+          <p class="italic text-gray-500 mb-6">
+            “你们寻求我，若专心寻求，就必寻见。” — 耶利米书 29:13
+          </p>
+</div>
+<br/>
+<br/>
+        <!-- 按钮靠右 -->
+        <div class="flex justify-end">
+<a
+  href={url("/")}
+  class="font-bold overflow-hidden active:scale-95 transition-transform duration-200 hover:scale-105 inline-block"
+>
+  <div class="btn-plain transition max-w-fit rounded-2xl h-[3.75rem] px-6 flex items-center justify-center gap-2 bg-[#2C4454] hover:bg-[#24363f] text-white">
+    返回主页
+    <Icon name="material-symbols:chevron-right-rounded" class="text-[1.75rem]" />
+  </div>
+</a>
+
+        </div>
       </div>
     </div>
   </MainGridLayout>
