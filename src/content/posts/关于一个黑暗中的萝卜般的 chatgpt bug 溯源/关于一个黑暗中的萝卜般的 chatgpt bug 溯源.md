@@ -4,7 +4,7 @@ published: 2024-12-27
 description: '一个黑暗中的萝卜'
 image: ''
 tags: ['Debug', '杂谈']
-category: '技术'
+category: '学术'
 draft: false 
 ---
 

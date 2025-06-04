@@ -4,7 +4,7 @@ published: 2024-09-06
 description: '未跟进 Cheerio 的更新而修改代码出现的错误'
 image: ''
 tags: ['网络', 'Debug']
-category: '技术'
+category: '学术'
 draft: false 
 ---
 
