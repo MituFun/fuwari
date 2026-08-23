@@ -4,7 +4,7 @@ published: 2025-10-01
 description: '一个简单的几何的问题'
 image: ''
 tags: ['算法', '数学']
-category: '学术'
+category: '竞赛'
 draft: false 
 lang: ''
 ---

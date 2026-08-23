@@ -4,7 +4,7 @@ published: 2022-05-28
 description: '搬运自我的 cnblogs'
 image: ''
 tags: ['算法']
-category: '学术'
+category: '竞赛'
 draft: false 
 lang: ''
 ---

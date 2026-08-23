@@ -4,7 +4,7 @@ published: 2024-08-22
 description: ''
 image: ''
 tags: ['Python', '内网穿透', 'OpenFrp']
-category: '学术'
+category: '杂谈'
 draft: false 
 ---
 
