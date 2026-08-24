@@ -4,7 +4,7 @@ published: 2026-08-23
 description: '如题所示'
 image: ''
 tags: ['算法']
-category: '学术'
+category: '杂谈'
 draft: false 
 lang: ''
 ---
